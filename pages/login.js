@@ -1,20 +1,23 @@
 import {Button, Form, Input} from 'antd';
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import styles from "styles/login.module.scss"
-import {useDispatch} from "react-redux";
-import {login} from "store";
-import {token} from "utils/token";
+import {useDispatch, useSelector} from "react-redux";
+import {_getLoading, login, setLoading} from "store";
+import {useRouter} from "next/router";
 
 const Login = () => {
-    const [isLoading, setLoading] = useState(false)
     const dispatch = useDispatch()
-
+    const router = useRouter()
+    const isLoading = useSelector(_getLoading)
     const onFinish = (values) => {
-        setLoading(true)
+        dispatch(setLoading(true))
         setTimeout(() => {
-           dispatch(login(values))
-        },3000)
-        setLoading(false)
+            dispatch(login({
+                username: values?.username,
+                password: values?.password,
+                router: router
+            }))
+        }, 3000)
     };
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
