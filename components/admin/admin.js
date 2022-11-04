@@ -19,8 +19,15 @@ function getItem(label, key, icon, path, children) {
 }
 
 const items = [
-    getItem('Houses', '1', <SnippetsOutlined/>, "/houses"),
-    getItem('Satisfied Customers', '2', <TeamOutlined/>, "/satisfied-customers")
+    getItem('Obyekt', '1', <SnippetsOutlined/>, "/object"),
+    getItem('Uy', '2', <TeamOutlined/>, "/houses"),
+    getItem('Xonadon', '2', <TeamOutlined/>, "/room"),
+    getItem('Tur', '2', <TeamOutlined/>, "/type"),
+    getItem('Shartnoma', '2', <TeamOutlined/>, "/contract"),
+    getItem('Buxgalteriya', '2', <TeamOutlined/>, "/accounting"),
+    getItem('Qarzdorlar', '2', <TeamOutlined/>, "/debt"),
+    // getItem('Subkategoriya', '2', <TeamOutlined/>, "/subcategory"),
+    // getItem('Mahsulot', '2', <TeamOutlined/>, "/product"),
 ];
 
 const Admin = ({children}) => {
@@ -51,7 +58,7 @@ const Admin = ({children}) => {
             >
                 <div className="sidebar-logo" onClick={() => handleMainPage()}>
                     {
-                        !collapsed ? " Houses" : "HS"
+                        !collapsed ? " Object" : "HS"
                     }
                 </div>
                 <Menu theme="dark"

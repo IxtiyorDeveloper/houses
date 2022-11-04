@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {Admin, Tabs, HousePage} from "components";
-import {DeleteOutlined,PlusCircleOutlined} from "@ant-design/icons";
+import {Admin, Tabs} from "components";
+import {DeleteOutlined, PlusCircleOutlined} from "@ant-design/icons";
 
-function Object(props) {
+function Debt(props) {
     const [index, setIndex] = useState(0)
 
     const handleDelete = () => {
@@ -16,10 +16,10 @@ function Object(props) {
                 setIndex={setIndex}
                 tabs={[
                     {
-                        title: "Uylar",
+                        title: "Qarzdorlar",
                         content: (
                             <div>
-                                <HousePage/>
+                                Buxgalteriya
                             </div>
                         ),
                     },
@@ -36,4 +36,4 @@ function Object(props) {
     );
 }
 
-export default Object;
+export default Debt;
