@@ -1,26 +1,46 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Rubik', sans-serif!important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+.sidebar-logo {
+  height: 32px !important;
+  margin: 16px !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+  padding: 24px;
+}
+.mHeader {
+  background: #fff !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.t-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
 }
